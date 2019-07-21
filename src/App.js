@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BoxVideo>
       <div className="header">
-        <input type="text" onChange={(e) => setVideo(e.target.value)} value={video} />
+        <input type="text" onChange={(e) => setVideo(e.target.value)} value={video} placeholder="URL Vídeo" />
       </div>
       <AreaVideo url={ video } />
     </BoxVideo>
@@ -19,7 +19,7 @@ const App = () => {
 
 const BoxVideo = styled.div`
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   .header{
     height: 60px;
@@ -27,6 +27,7 @@ const BoxVideo = styled.div`
     display: flex;
     align-items: center;
     padding: 0 20px;
+    justify-content: space-between;
 
     input{
       display: block;
@@ -35,6 +36,11 @@ const BoxVideo = styled.div`
       padding: 0 20px;
       font-family: inherit;
       width: 100%;
+
+
+      &[type="file"]{
+        width: 150px;
+      }
     }
   }
 `
