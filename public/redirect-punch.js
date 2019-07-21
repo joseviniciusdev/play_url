@@ -1,1 +1,3 @@
-window.location.href = link
+setTimeout(() => {
+  window.location.href = link
+},100)
